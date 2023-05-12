@@ -1,4 +1,4 @@
-export function* getJsonFromDataChunk(chunk: string): Generator<string> {
+function* getJsonFromDataChunk(chunk: string): Generator<string> {
 	const lines = chunk.split('data: ')
 	for (let line of lines) {
 		line = line.trim()
