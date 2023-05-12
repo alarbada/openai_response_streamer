@@ -1,7 +1,3 @@
-import openai from 'npm:openai'
-
-export type ChatMessage = openai.ChatCompletionRequestMessage
-
 export function* getJsonFromDataChunk(chunk: string): Generator<string> {
 	const lines = chunk.split('data: ')
 	for (let line of lines) {
